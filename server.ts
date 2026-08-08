@@ -19,10 +19,10 @@ Deno.serve(async (req) => {
             }
             ticketContent += "-------------------\n"; 
             await Deno.writeTextFile("tickets.txt", ticketContent, { append: true });
-            return new Response("Ticket submitted successfully!", { status: 200 });
+            return new Response("Ticket submitted successfully!", { status: 200, headers });
         } catch (error) {
-            return new Response("Error saving ticket.", { status: 500 });
+            return new Response("Error saving ticket.", { status: 500, headers });
         }
     }
-    return new Response("Not Found", { status: 404 });
+    return new Response("Not Found", { status: 404, headers });
 })
