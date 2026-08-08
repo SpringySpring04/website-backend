@@ -3,7 +3,7 @@ Deno.serve(async (req) => {
     const url = new URL(req.url);
     const headers = {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://springyspring04.github.io",
         "Access-Control-Allow-Methods": "POST, OPTIONS",
         "Access-Control-Allow-Headers": "Content-Type",
     };
